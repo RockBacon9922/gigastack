@@ -6,8 +6,8 @@
       "~/*": ["./src/*"]
     },
     "jsx": "react-native",
-    "types": ["nativewind/types"]
+    "types": ["nativewind/types", "webpack-env"]
   },
-  "include": ["expo-plugins", "src", "*.ts", "index.tsx", "*.js"],
+  "include": ["expo-plugins", "src", "*.ts", "**/*.js", "index.tsx"],
   "exclude": ["node_modules", "*.config.js"]
 }

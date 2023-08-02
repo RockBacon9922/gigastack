@@ -3,7 +3,7 @@ import { SplashScreen, Stack, useSearchParams } from "expo-router";
 
 import { api } from "~/utils/api";
 
-function Post() {
+const Post: React.FC = () => {
   const { id } = useSearchParams();
   if (!id || typeof id !== "string") throw new Error("unreachable");
   const { data } = api.post.byId.useQuery({ id });
@@ -19,6 +19,6 @@ function Post() {
       </View>
     </SafeAreaView>
   );
-}
+};
 
 export default Post;

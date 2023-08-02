@@ -17,5 +17,5 @@
     "incremental": true,
     "noUncheckedIndexedAccess": true
   },
-  "include": ["prettier.config.mjs"]
+  "include": [".eslintrc.js", "prettier.config.cjs"]
 }

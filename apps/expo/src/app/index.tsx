@@ -4,33 +4,32 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { Stack, useRouter } from "expo-router";
 import { FlashList } from "@shopify/flash-list";
 
-import { api } from "~/utils/api";
-import type { RouterOutputs } from "~/utils/api";
+import { api, type RouterOutputs } from "~/utils/api";
 
-function PostCard(props: {
+const PostCard: React.FC<{
   post: RouterOutputs["post"]["all"][number];
   onDelete: () => void;
-}) {
+}> = ({ post, onDelete }) => {
   const router = useRouter();
 
   return (
     <View className="flex flex-row rounded-lg bg-white/10 p-4">
       <View className="flex-grow">
-        <TouchableOpacity onPress={() => router.push(`/post/${props.post.id}`)}>
+        <TouchableOpacity onPress={() => router.push(`/post/${post.id}`)}>
           <Text className="text-xl font-semibold text-pink-400">
-            {props.post.title}
+            {post.title}
           </Text>
-          <Text className="mt-2 text-white">{props.post.content}</Text>
+          <Text className="mt-2 text-white">{post.content}</Text>
         </TouchableOpacity>
       </View>
-      <TouchableOpacity onPress={props.onDelete}>
+      <TouchableOpacity onPress={onDelete}>
         <Text className="font-bold uppercase text-pink-400">Delete</Text>
       </TouchableOpacity>
     </View>
   );
-}
+};
 
-function CreatePost() {
+const CreatePost: React.FC = () => {
   const utils = api.useContext();
 
   const [title, setTitle] = React.useState("");
@@ -83,7 +82,7 @@ function CreatePost() {
       </TouchableOpacity>
     </View>
   );
-}
+};
 
 const Index = () => {
   const utils = api.useContext();
@@ -122,7 +121,7 @@ const Index = () => {
           renderItem={(p) => (
             <PostCard
               post={p.item}
-              onDelete={() => deletePostMutation.mutate(p.item.id)}
+              onDelete={() => deletePostMutation.mutate(p.item?.id)}
             />
           )}
         />
