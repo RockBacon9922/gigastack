@@ -1,25 +1,25 @@
 {
   "$schema": "https://turborepo.org/schema.json",
-  "globalDependencies": ["**/.env", "tsconfig.json"],
   "pipeline": {
-    "db:generate": {
+    "db-generate": {
       "inputs": ["prisma/schema.prisma"],
       "cache": false
     },
-    "db:push": {
+    "db-push": {
       "inputs": ["prisma/schema.prisma"],
       "cache": false
     },
     "dev": {
-      "persistent": true,
+      "dependsOn": ["^db-generate"],
       "cache": false
     },
     "build": {
-      "dependsOn": ["^build", "^db:generate"],
+      "dependsOn": ["^build", "^db-generate"],
       "outputs": [".next/**", ".expo/**"]
     },
-    "lint": {},
-    "lint:fix": {},
+    "lint": {
+      "outputs": []
+    },
     "clean": {
       "cache": false
     },
@@ -27,22 +27,13 @@
       "cache": false
     },
     "type-check": {
-      "dependsOn": ["^db:generate"],
+      "dependsOn": ["^db-generate"],
       "cache": false
     }
   },
   "globalEnv": [
-    "CI",
     "DATABASE_URL",
-    "DISCORD_CLIENT_ID",
-    "DISCORD_CLIENT_SECRET",
-    "EXPO_ROUTER_APP_ROOT",
-    "NEXTAUTH_SECRET",
-    "NEXTAUTH_URL",
-    "NODE_ENV",
-    "SKIP_ENV_VALIDATION",
-    "PORT",
-    "VERCEL",
-    "VERCEL_URL"
+    "NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY",
+    "CLERK_SECRET_KEY"
   ]
 }
