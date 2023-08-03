@@ -42,10 +42,10 @@ importers:
   apps/nextjs:
     dependencies:
       '@acme/api':
-        specifier: workspace:^
+        specifier: ^0.1.0
         version: link:../../packages/api
       '@acme/tailwind-config':
-        specifier: workspace:^
+        specifier: ^0.1.0
         version: link:../../packages/config/tailwind
       '@clerk/nextjs':
         specifier: ^4.23.2
