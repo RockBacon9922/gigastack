@@ -12,8 +12,8 @@
     "type-check": "pnpm with-env tsc --noEmit"
   },
   "dependencies": {
-    "@acme/api": "workspace:^",
-    "@acme/tailwind-config": "workspace:^",
+    "@acme/api": "^0.1.0",
+    "@acme/tailwind-config": "^0.1.0",
     "@clerk/nextjs": "^4.23.2",
     "@t3-oss/env-nextjs": "^0.6.0",
     "@tanstack/react-query": "^4.32.1",
