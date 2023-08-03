@@ -29,7 +29,6 @@ export const config = {
 
 // export API handler
 export default async function handler(req: NextRequest) {
-  const auth = getAuth(req);
   return fetchRequestHandler({
     req,
     endpoint: "/api/trpc",

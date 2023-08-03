@@ -1,8 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import { trpc } from "../utils/trpc";
-import type { inferProcedureOutput } from "@trpc/server";
-import type { AppRouter } from "@acme/api";
 import { useAuth, UserButton } from "@clerk/nextjs";
 import Link from "next/link";
 

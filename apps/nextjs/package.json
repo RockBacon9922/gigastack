@@ -5,15 +5,15 @@
   "scripts": {
     "with-env": "dotenv -e ../../.env --",
     "dev": "pnpm with-env next dev",
-    "build": "next build",
-    "clean": "rm -rf .next .turbo node_modules",
-    "start": "next start",
-    "lint": "next lint",
-    "type-check": "tsc --noEmit"
+    "build": "pnpm with-env next build",
+    "clean": "pnpm with-env rm -rf .next .turbo node_modules",
+    "start": "pnpm with-env next start",
+    "lint": "pnpm with-env next lint",
+    "type-check": "pnpm with-env tsc --noEmit"
   },
   "dependencies": {
-    "@acme/api": "^0.1.0",
-    "@acme/tailwind-config": "^0.1.0",
+    "@acme/api": "workspace:^",
+    "@acme/tailwind-config": "workspace:^",
     "@clerk/nextjs": "^4.23.2",
     "@t3-oss/env-nextjs": "^0.6.0",
     "@tanstack/react-query": "^4.32.1",
