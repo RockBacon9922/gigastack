@@ -6,6 +6,7 @@ import { getAuth } from "@clerk/nextjs/server";
 import { initTRPC, TRPCError, type inferAsyncReturnType } from "@trpc/server";
 import { type CreateNextContextOptions } from "@trpc/server/adapters/next";
 import superjson from "superjson";
+import { db } from "@acme/db";
 
 import type { GetServerSidePropsContext } from "next";
 import { NextRequest } from "next/server";
@@ -27,6 +28,7 @@ export const createContextInner = async ({ auth, req }: AuthContextProps) => {
   return {
     auth,
     req,
+    db,
   };
 };
 
