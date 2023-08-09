@@ -105,6 +105,9 @@ importers:
       postcss:
         specifier: ^8.4.27
         version: 8.4.27
+      prettier-plugin-tailwindcss:
+        specifier: ^0.1.13
+        version: 0.1.13(prettier@2.8.8)
       tailwindcss:
         specifier: ^3.3.3
         version: 3.3.3
@@ -3984,13 +3987,11 @@ packages:
       prettier: '>=2.2.0'
     dependencies:
       prettier: 2.8.8
-    dev: false
 
   /prettier@2.8.8:
     resolution: {integrity: sha512-tdN8qQGvNjw4CHbY+XXk0JgCXn9QiF21a55rBe5LJAU+kDyC4WQn4+awm2Xfk2lQMk5fKup9XgzTZtGkjBdP9Q==}
     engines: {node: '>=10.13.0'}
     hasBin: true
-    dev: false
 
   /prisma-kysely@1.5.0:
     resolution: {integrity: sha512-v+7BDxnV/Q7tefGOkCKnFnPO174CquOrn/Pl9/svNggM106VqSDx2Z8Yb4ZqW4vSttCO4fgaYoEjbbaF+2Payg==}
