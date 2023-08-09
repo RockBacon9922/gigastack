@@ -1,10 +1,22 @@
-[![CI](https://github.com/perkinsjr/t3-turbo-and-clerk/actions/workflows/ci.yml/badge.svg)](https://github.com/perkinsjr/t3-turbo-and-clerk/actions/workflows/ci.yml)
 
-# Create T3 Turbo with Clerk Authentication
+# The Stoneham Stack
+> __I hate slow apps__, I also don't like writing difficult code, here is my answer.
+- Edge deployments for speed and reduced cost
+- Prisma as a database schema controller
+- Kysely for database calls
+- Clerk for super secure and simple auth.
+
+###### This stack has caused me so much pain to get working; but now it helps helps me all I hope is it helps you too ❤️
+
+I can't really be bothered to do much documentation for this stack the premise is it is a turbo repo with a nextjs app. I cloned the inital from create t3 turbo with clerk. I then wanted trpc to work on the edge so I then incorporated [ploskovytskyy/next-app-router-trpc-drizzle-planetscale-edge](https://github.com/ploskovytskyy/next-app-router-trpc-drizzle-planetscale-edge) into the stack.
+
+I have removed clerk from the puzzle at the moment as I am not knowledgeable enough to make sure it is working correctly.
+
+I have been really inspired by [Theo Browne](https://github.com/t3dotgg) to make this stack. Incorporating pieces of the T3 stack and modern edge technology which he preaches.
+
+# Here is the default create-t3-turbo documentation
 
 ## Clerk Dashboard Setup
-
-For this template to work you need to enable Discord as an OAuth provider. You can find the social options under `User & Authentication / Social Providers` in the [Clerk Dashboard](https://dashboard.clerk.dev)
 
 > If you change any setting here outside of adding Discord, you may need to update your Expo code to handle any requirements you change.
 
