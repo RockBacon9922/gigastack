@@ -2,3 +2,4 @@ packages:
   - apps/nextjs
   - packages/api
   - packages/config/*
+  - packages/db
