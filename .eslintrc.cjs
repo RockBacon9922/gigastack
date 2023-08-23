@@ -1,10 +1,8 @@
 /** @type {import("eslint").Linter.Config} */
-const config = {
+module.exports = {
   root: true,
-  extends: ["@acme/eslint-config"], // uses the config in `packages/config/eslint`
   parser: "@typescript-eslint/parser",
   parserOptions: {
-    ecmaVersion: "latest",
     tsconfigRootDir: __dirname,
     project: [
       "./tsconfig.json",
@@ -12,11 +10,6 @@ const config = {
       "./packages/*/tsconfig.json",
     ],
   },
-  settings: {
-    next: {
-      rootDir: ["apps/nextjs"],
-    },
-  },
+  plugins: ["@typescript-eslint"],
+  extends: ["plugin:@typescript-eslint/recommended"],
 };
-
-module.exports = config;
