@@ -13,7 +13,7 @@
     "type-check": "pnpm with-env tsc --noEmit"
   },
   "dependencies": {
-    "@vercel/postgres-kysely": "^0.4.1",
+    "@vercel/postgres-kysely": "^0.7.0",
     "kysely": "^0.26.1",
     "prisma-kysely": "^1.5.0"
   },
