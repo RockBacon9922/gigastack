@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@vercel/postgres-kysely": "^0.4.1",
-    "kysely": "^0.26.1",
+    "kysely": "^0.28.0",
     "prisma-kysely": "^1.5.0"
   },
   "devDependencies": {
